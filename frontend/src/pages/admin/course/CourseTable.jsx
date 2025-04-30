@@ -26,18 +26,20 @@ const CourseTable = () => {
         <TableCaption>A list of your recent courses.</TableCaption>
         <TableHeader>
           <TableRow>
-            <TableHead className="w-[100px]">Price</TableHead>
+              <TableHead>Title</TableHead>
+            <TableHead className="w-[280px]">Price</TableHead>
             <TableHead>Status</TableHead>
-            <TableHead>Title</TableHead>
+            
             <TableHead className="text-right">Action</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
         {data?.courses.map((course) => (
           <TableRow key={course._id}>
+              <TableCell>{course.courseTitle}</TableCell>
             <TableCell className="font-medium">{course?.coursePrice || "NA"}</TableCell>
-            <TableCell><Badge>{course.isPublished ? "published" : "Draft"}</Badge></TableCell>
-            <TableCell>{course.courseTitle}</TableCell>
+            <TableCell><Badge className="dark:bg-green-300 dark:text-black">{course.isPublished ? "published" : "Draft"}</Badge></TableCell>
+            
             <TableCell className="text-right">
               <Button size='sm' variant='ghost'onClick={()=>navigate(`${course._id}`)}><Edit2/></Button>
             </TableCell>
