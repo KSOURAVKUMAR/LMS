@@ -20,7 +20,7 @@ import {
   useRemoveLectureMutation,
 } from "@/features/api/courseApi";
 import { useNavigate, useParams } from "react-router-dom";
-const MEDIA_API = "http://localhost:8080/api/v1/media";
+const MEDIA_API = "https://lms-backend-u0e4.onrender.com/api/v1/media";
 const LectureTab = () => {
   const navigate = useNavigate();
   const [lectureTitle, setLectureTitle] = useState("");
