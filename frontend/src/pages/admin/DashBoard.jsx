@@ -42,7 +42,7 @@ const DashBoard = () => {
           <CardTitle>Total Revenue</CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="text-3xl font-bold text-blue-600">{totalRevenue}</p>
+          <p className="text-3xl font-bold text-blue-600">{totalRevenue}₹</p>
         </CardContent>
       </Card>
 
